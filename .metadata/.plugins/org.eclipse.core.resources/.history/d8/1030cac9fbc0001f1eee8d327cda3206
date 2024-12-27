@@ -1,0 +1,19 @@
+import Files.payload;
+import io.restassured.path.json.JsonPath;
+
+public class CompareJsonParse {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+ JsonPath js = new JsonPath(payload.CoursePrice());
+ 
+ //Print the No of Courses in API
+ int count = js.getInt("courses.size()");
+ System.out.println(count);
+ //Print the Purchase Amount
+ 
+ int TotalPurchaseAmount = js.getInt("dashboard.purchaseAmount");
+ System.out.println(TotalPurchaseAmount);
+	}
+
+}
